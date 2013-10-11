@@ -43,9 +43,11 @@ describe "Static pages" do
     click_link "Home"
     click_link "Sign Up"
     page.should have_selector 'title', text: 'Sign Up'
+  end
+
+  it "should have a working signup button on the home page" do
     visit root_path
     click_link "Sign up now!"
     page.should have_selector 'title', text: 'Sign Up'
-
   end
 end
